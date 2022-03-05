@@ -2,42 +2,148 @@
 @{
     ViewData["Title"] = "Hotsite";
 }
+<div class="row mt-5">
+    <div class="col-md-4">
 
-<div>
-    <h1>Iniciativa Saúde da Cidade</h1>
-    <p>
-        Texto sobre vida saudável: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
-    </p>
-    <p>
-        Texto sobre vida iniciativa: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
-    </p>
+        <div>
+            <h1>Iniciativa Saúde da Cidade</h1>
+            <p>
+                Texto sobre vida saudável: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae
+                legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae
+                hendrerit.
+            </p>
+            <p>
+                Texto sobre vida iniciativa: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae
+                legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae
+                hendrerit.
+            </p>
+        </div>
+    </div>
+    <div class="col-md-8">
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <div class="card-body">
+                        <a href="#" data-toggle="modal" data-target="#Agenda" class="text-center"">Agenda de eventos</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <div class="card-body">
+                        <a href="#" data-toggle="modal" data-target="#Dicas" class="text-center"">Dicas de vida saudável</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="..." alt="Card image cap">
+                    <div class="card-body">
+                        <a href="#" data-toggle="modal" data-target="#Apoiadores" class="text-center"">Apoiadores</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-md-8">
+        colocar uma div com img
+    </div>
+
+    <div class="row mt-3">
+
+        <div class="col-md-6">
+
+            <div id="divdoformulario">
+                <h2>Entre em contato!:</h2>
+                <p>Nos mande uma mensagem e fique por dentro de nossos eventos</p>
+
+                <form method="POST" id="formulariocadastro">
+                
+                <div>
+                        <label asp-for="Nome">Nome:</label>
+                        <input asp-for="Nome" />
+                    </div>
+                    <div>
+                        <label asp-for="Email">Email:</label>
+                        <input asp-for="Email" />
+                    </div>
+                    <div>
+                        <label asp-for="Mensagem">Mensagem (opcional):</label>
+                        <textarea asp-for="Mensagem"></textarea>
+                    </div>
+
+                     <div>
+                        <input type="submit" value="Enviar" />
+                    </div> 
+                              
+            </div>
+        </div>
+
+    </div>
+
+
+<div class="modal fade" id="Agenda" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div>
-    <h2>Entre em contato!:</h2>
-    <p>Nos mande uma mensagem e fique por dentro de nossos eventos</p>
-
-    <form action="/Home/Cadastrar" method="POST">
-        <div>
-            <label asp-for="Nome">Nome:</label>
-            <input asp-for="Nome" />
-        </div>
-        <div>
-            <label asp-for="Email">Email:</label>
-            <input asp-for="Email" />
-        </div>
-        <div>
-            <label asp-for="Mensagem">Mensagem (opcional):</label>
-            <textarea asp-for="Mensagem"></textarea>
-        </div>
-        <div>
-            <input type="submit" value="Enviar" />
-        </div>
-    </form>
+<div class="modal fade" id="Dicas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
 </div>
-
-<div>
-    <a href="#">Agenda de eventos</a>
-    <a href="#">Dicas de vida saudável</a>
-    <a href="#">Apoiadores</a>
+<div class="modal fade" id="Apoiadores" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
 </div>

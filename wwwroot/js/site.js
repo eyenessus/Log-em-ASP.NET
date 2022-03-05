@@ -1,4 +1,17 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿
+function Cadastrar() {
+   $("#divdoformulario").after("<h3>Cadastrar</h3>");
+   $("#divdoformulario").hide();
+}
 
-// Write your JavaScript code.
+$(document).ready(
+    function () {
+        //nesse bloco que controlamos o submite que sera realizado no formulario
+        $("#formulariocadastro").submit(
+            function (e) {
+                e.preventDefault();
+                Cadastrar();
+            }
+        );
+    }
+);
