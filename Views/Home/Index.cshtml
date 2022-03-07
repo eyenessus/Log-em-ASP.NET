@@ -1,148 +1,206 @@
 ﻿@model Interesse
 @{
-    ViewData["Title"] = "Hotsite";
+  ViewData["Title"] = "Hotsite";
 }
 <div class="row mt-5">
-    <div class="col-md-4">
 
+  <div class="col-md-4">
+    <div>
+      <h1>Iniciativa Saúde da Cidade</h1>
+      <p>
+        Texto sobre vida saudável: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at
+        vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
+      </p>
+      <p>
+        Texto sobre vida iniciativa: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at
+        vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
+      </p>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <!--colocar uma div com img --------------------------------------------------------------->
+    <div>
+      <img src="https://www.economus.com.br/wp-content/uploads/2020/12/banner-1.jpg">
+    </div>
+  </div>
+
+</div>
+
+<div class="row mt-3">
+
+  <div class="col-md-4">
+    <div id="divdoformulario" class="border border-secondary" >
+      <h2>Entre em contato!</h2>
+      <p>Nos mande uma mensagem e fique por dentro de nossos eventos</p>
+    
+
+      <form id="formulario" method="POST" >
         <div>
-            <h1>Iniciativa Saúde da Cidade</h1>
-            <p>
-                Texto sobre vida saudável: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae
-                legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae
-                hendrerit.
-            </p>
-            <p>
-                Texto sobre vida iniciativa: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae
-                legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae
-                hendrerit.
-            </p>
+          <label asp-for="Nome" class="text-justify">Nome:</label>
+          <input asp-for="Nome" id="nome" size="15" required/>
         </div>
-    </div>
-    <div class="col-md-8">
-
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="..." alt="Card image cap">
-                    <div class="card-body">
-                        <a href="#" data-toggle="modal" data-target="#Agenda" class="text-center"">Agenda de eventos</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="..." alt="Card image cap">
-                    <div class="card-body">
-                        <a href="#" data-toggle="modal" data-target="#Dicas" class="text-center"">Dicas de vida saudável</a>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-md-4">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="..." alt="Card image cap">
-                    <div class="card-body">
-                        <a href="#" data-toggle="modal" data-target="#Apoiadores" class="text-center"">Apoiadores</a>
-                    </div>
-                </div>
-
-            </div>
+        <div>
+          <label asp-for="Email" class="text-justify">Email:</label>
+          <input asp-for="Email" id="email" size="15" required/>
         </div>
-
-    </div>
-
-    <div class="col-md-8">
-        colocar uma div com img
-    </div>
-
-    <div class="row mt-3">
-
-        <div class="col-md-6">
-
-            <div id="divdoformulario">
-                <h2>Entre em contato!:</h2>
-                <p>Nos mande uma mensagem e fique por dentro de nossos eventos</p>
-
-                <form method="POST" id="formulariocadastro">
-                
-                <div>
-                        <label asp-for="Nome">Nome:</label>
-                        <input asp-for="Nome" />
-                    </div>
-                    <div>
-                        <label asp-for="Email">Email:</label>
-                        <input asp-for="Email" />
-                    </div>
-                    <div>
-                        <label asp-for="Mensagem">Mensagem (opcional):</label>
-                        <textarea asp-for="Mensagem"></textarea>
-                    </div>
-
-                     <div>
-                        <input type="submit" value="Enviar" />
-                    </div> 
-                              
-            </div>
+        <div>
+          <label asp-for="Mensagem" class="text-justify">Mensagem (opcional):</label>
+          <div>
+<textarea asp-for="Mensagem" id="mensagem" rows="3" required></textarea>
+          </div>
+          
         </div>
+        <br>
+        <div>
+          <input type="submit" value="Enviar" />
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="col-md-8">
+
+    <div class="row">
+      <div class="col-md-4">
+
+
+<div class="card" style="width: 200px">
+  <img class="card-img-top" src="https://www.lucrecia.rn.gov.br/wp-content/uploads/2019/04/1742898_resize_1000_.jpg" alt="Card image cap">
+  <div class="card-body">
+    <a href="#" class="text-center" data-toggle="modal" data-target="#Agenda">Agenda de eventos</a>
+  </div>
+</div>
+
+
+      </div>
+      <div class="col-md-4">
+        <div class="card" style="width: 200px">
+  <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuTZJvlNYu7KQZfqQ7JvTmsObl4Uscr5BcmkZgaZfRTTbZNCKqlsw-9Ja_pt63XXih8t8&usqp=CAU" alt="Card image cap">
+  <div class="card-body">
+    <a href="#" class="text-center" data-toggle="modal" data-target="#Dicas">Dicas de vida saudável</a>
+  </div>
+</div>
+      </div>
+      <div class="col-md-4">
+        
+
+        <div class="card" style="width: 200px">
+  <img class="card-img-top" src="https://asidbrasil.org.br/wp-content/uploads/2019/01/Descubra-como-manter-800x658.png" alt="Card image cap">
+  <div class="card-body">
+    <a href="#" class="text-center" data-toggle="modal" data-target="#Apos">Apoiadores</a>
+  </div>
+</div>
+
+      </div>
 
     </div>
+  
+  </div>
 
+</div>
 
-<div class="modal fade" id="Agenda" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+<!-- Modal -->
+<div class="modal fade" id="Agenda" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Agenda</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        ...
+        <p>
+          10/10/10 10:10 Evento 1
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui oficia deserunt mollit anim id est laborum.
+        </p>
+        <p>
+          10/10/10 10:10 Evento 1
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui oficia deserunt mollit anim id est laborum.
+        </p>
+        <p>
+          10/10/10 10:10 Evento 1
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui oficia deserunt mollit anim id est laborum.
+        </p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
       </div>
     </div>
   </div>
 </div>
 
-<div class="modal fade" id="Dicas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+
+
+<!-- Modal -->
+<div class="modal fade" id="Dicas" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Dicas de vida saudável</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        ...
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui oficia deserunt mollit anim id est laborum.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui oficia deserunt mollit anim id est laborum.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui oficia deserunt mollit anim id est laborum.
+        </p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
       </div>
     </div>
   </div>
 </div>
-<div class="modal fade" id="Apoiadores" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+
+
+<!-- Modal -->
+<div class="modal fade" id="Apos" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Apoiadores</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
-        ...
+      
+        
+        <span>
+          <div class="modal-body">
+        <img src="https://cee.fiocruz.br/sites/default/files/styles/chamada_grande/public/SUS%20%282%29_0.jpg?itok=OK8h_Ik0" width=70px; height=70px>
+          <span>SUS</span>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui oficia deserunt mollit anim id est laborum.
+        </span>
+      </div>
+      <span>
+          <div class="modal-body">
+        <img src="https://cee.fiocruz.br/sites/default/files/styles/chamada_grande/public/SUS%20%282%29_0.jpg?itok=OK8h_Ik0" width=70px; height=70px>
+          <span>SUS</span>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui oficia deserunt mollit anim id est laborum.
+        </span>
+      </div>
+      <span>
+          <div class="modal-body">
+        <img src="https://cee.fiocruz.br/sites/default/files/styles/chamada_grande/public/SUS%20%282%29_0.jpg?itok=OK8h_Ik0" width=70px; height=70px>
+          <span>SUS</span>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui oficia deserunt mollit anim id est laborum.
+        </span>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
       </div>
     </div>
   </div>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WwFeT2QRizAxvrO+Xs7jABV+CBbZSmzCJ/J5BMIVzZDXEV0ka6rhU6s5p9PeERB/GtnroHUfE9C/TUgPMP0lqA==",
+  "dgSpecHash": "SKKa0mQyRKFuzRgj95dOqYJDX2+TQ8UGdFX+L/jVWp3vO45vUxj5GTxohHo/EIfwH5r/H0Suj02tUThRbvwvaw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\nessu\\Downloads\\projetohotsite\\Hotsite.csproj",
+  "projectFilePath": "c:\\Users\\nessu\\Desktop\\projetohotsite\\Hotsite.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nessu\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\nessu\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
